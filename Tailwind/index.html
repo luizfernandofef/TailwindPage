@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-gray-500 my-1 mx-2 p-2 rounded-md">
+    <h1 class="text-center text-white text-2xl font-arial">Portfólio</h1>
+  </header>
+
+  <!-- Navegação -->
+  <nav class="bg-gray-300 mx-3 p-2 rounded relative">
+    <div class="flex items-center justify-between bg-gray-200 p-2 rounded">
+      <!-- Logo -->
+      <a href="#">
+        <img src="imagens/img-logoDef.png" alt="Logo" class="w-20">
+      </a>
+
+      <!-- Botão hamburguer -->
+      <button id="button" class="md:hidden text-3xl hover:cursor-pointer">
+        ☰
+      </button>
+
+      <!-- Menu (desktop) -->
+      <div id="menu" class="hidden md:flex">
+        <ul class="flex mx-2 items-center gap-4">
+          <li><a href="#" class="text-lg underline hover:text-white">Home</a></li>
+          <li><a href="#" class="text-lg underline hover:text-white">Socials</a></li>
+          <li><a href="#" class="text-lg underline hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Menu (mobile, aparece abaixo) -->
+    <div id="menu-mobile" class="hidden md:hidden mt-2 bg-gray-200 rounded p-2 text-center">
+      <ul class="flex flex-col gap-2">
+        <li><a href="#" class="text-lg underline hover:text-white">Home</a></li>
+        <li><a href="#" class="text-lg underline hover:text-white">Socials</a></li>
+        <li><a href="#" class="text-lg underline hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="bg-gray-300 mx-3 my-2 p-2 rounded space-y-4">
+    <section class="border p-2 rounded">
+      <h2 class="text-center text-lg underline font-serif mb-2">Desenvolvedor front-end</h2>
+      <div class="flex flex-col md:flex-row p-1 gap-2 rounded">
+        <p class="indent-8 p-2 text-justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam veritatis harum repellat omnis architecto?
+          Dolores quam, odio minima sed consequatur asperiores culpa id nisi pariatur blanditiis excepturi, tempore
+          porro mollitia.
+        </p>
+        <img src="imagens/imgPerfilDef.png" alt="Imagem do Desenvolvedor"
+          class="hidden md:block w-40 ml-auto rounded">
+      </div>
+    </section>
+
+    <section class="border p-2 rounded">
+      <h3 class="text-center text-xl underline font-serif mb-2">Tecnologias conhecidas</h3>
+      <span class="flex justify-center my-1 gap-3 flex-wrap">
+        <abbr title="HTML"><img src="imagens/html.png" alt="icon HTML" class="w-12"></abbr>
+        <abbr title="CSS"><img src="imagens/css.png" alt="icon CSS" class="w-12"></abbr>
+        <abbr title="JavaScript"><img src="imagens/js.png" alt="icon JavaScript" class="w-12"></abbr>
+        <abbr title="Bootstrap"><img src="imagens/bootstrap.png" alt="icon Bootstrap" class="w-12"></abbr>
+        <abbr title="Tailwind"><img src="imagens/tailwind_icon_213294.png" alt="icon Tailwind" class="w-12"></abbr>
+      </span>
+    </section>
+
+    <section class="border p-2 rounded">
+      <h3 class="text-center text-xl underline font-serif mb-3">Projetos</h3>
+      <div class="flex flex-col md:flex-row gap-4">
+        <!-- Card 1 -->
+        <div class="border bg-blue-100 rounded shadow p-2 flex-1">
+          <h3 class="text-center underline text-xl mb-1">Sistema</h3>
+          <img src="imagens/cardSistema.jpeg" alt="Imagem projeto Sistema" class="m-auto rounded">
+          <p class="indent-4 p-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            corporis sit ex dolorem esse quis at, fugit accusantium reiciendis.</p>
+          <button
+            class="block bg-blue-400 p-2 rounded-md text-white m-auto my-2 hover:bg-blue-500 transition">Visualizar</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="border bg-blue-100 rounded shadow p-2 flex-1">
+          <h3 class="text-center underline text-xl mb-1">E-commerce</h3>
+          <img src="imagens/cardEcomerc2.png" alt="Imagem projeto E-commerce" class="m-auto rounded">
+          <p class="indent-4 p-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            corporis sit ex dolorem esse quis at, fugit accusantium reiciendis.</p>
+          <button
+            class="block bg-blue-400 p-2 rounded-md text-white m-auto my-2 hover:bg-blue-500 transition">Visualizar</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="border bg-blue-100 rounded shadow p-2 flex-1">
+          <h3 class="text-center underline text-xl mb-1">Portfólio</h3>
+          <img src="imagens/cardPortfolio.png" alt="Imagem projeto Portfólio" class="m-auto rounded">
+          <p class="indent-4 p-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            corporis sit ex dolorem esse quis at, fugit accusantium reiciendis.</p>
+          <button
+            class="block bg-blue-400 p-2 rounded-md text-white m-auto my-2 hover:bg-blue-500 transition">Visualizar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-400 p-1 mt-2 rounded">
+    <p class="text-center text-white">Todos os direitos reservados &copy;</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const btn = document.getElementById("button");
+    const menuMobile = document.getElementById("menu-mobile");
+
+    btn.addEventListener("click", () => {
+      menuMobile.classList.toggle("hidden");
+    });
+  </script>
+</body>
+
+</html>
